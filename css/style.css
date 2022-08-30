@@ -8,9 +8,16 @@ body{
 }
 html {
     scroll-behavior: smooth;
-  }
-
+}
 @media screen and (max-width: 480px){
+@keyframes moveIn{
+    from {
+            transform: translateX(100vw);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
     /*HEADER HEADER HEADER HEADER HEADER HEADER*/
 .header_nav-lista{
     font-size: 3vw;
@@ -22,6 +29,7 @@ html {
     float: right;
     margin: 3vw 3vw 0 3vw;
     cursor: pointer;
+    transition: all .1s;
 }
 .header_nav-linea:hover{
     margin-top: 3.5vw;
@@ -34,6 +42,27 @@ html {
     height: 100vh;
     width: 100%;
 }
+#main_titulo-1linea{
+    animation-duration: 1s;
+    background-color: #D162AF;
+    animation-name: moveIn;
+}
+#main_titulo-2linea{
+    animation-duration: 3s;
+    background-color: #E27023;
+    width: 100%;
+    animation-name: moveIn;
+}
+#main_titulo-3linea{
+    animation-duration: 2s;
+    background-color: #F8C823;
+    animation-name: moveIn;
+}
+#main_titulo-4linea{
+    animation-duration: 3s;
+    background-color: #7685E6;
+    animation-name: moveIn;
+}
 .main_titulo{
     display: flex;
     flex-direction: column;
@@ -44,6 +73,7 @@ html {
     font-weight: 500;
     overflow: hidden;
     bottom: 0px;
+    animation-name: moveIn;
 }
 .marginL8vw{
     margin-left: 8vw;
@@ -52,10 +82,26 @@ html {
     margin-left: 15.5vw;
 }
 .main_imagen{
+    height: 92.8vw;
     width: 70vw;
     display: block;
     margin: 5vw auto 5vw auto;
     border-radius: 5vw;
+    transition: all 0.1s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://drive.google.com/uc?/export=view&id=1ccwT7PW5BC-x3L8RSlPy2whTkBe6Wew9");
+}
+.main_imagen:hover{
+    box-shadow: 5px 5px 52px 5px rgba(0, 0, 0, 0.3);
+    width: 70vw;
+    height: 92.8vw;
+    border-radius: 5vw;
+    background-image: url("https://drive.google.com/uc?/export=view&id=1q86OsRkDKZLwKUCHoOewIAa3C0ysRS_z");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .main_container-texto{
     margin: 5vw 5vw 5vw 5vw;
@@ -72,6 +118,58 @@ html {
 .marginL5vw{
     margin-left: 5vw;
 }
+#target{
+    width:0px;
+    height:9vw;
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    overflow:hidden;
+    top:0px;
+    transition: 0.5s;
+    z-index:1;
+    margin-left: -3vw;
+    margin-right: 4vw;
+    border-radius: 0 50vw 50vw 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .linko{
+    background-color:black;
+    display:flex;
+    width:10vw;
+    height:10vw;
+    border-radius:50%;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    align-items:center;
+    justify-content:center;
+    font-size:5vw;
+    font-weight:700;
+    z-index:2;
+    transition: all 0.75s;
+    overflow: hidden;
+    caret-color: transparent;
+}
+  .linko:hover{
+    background-color: rgb(240, 240, 240);
+    color: black;
+  }
+  .linko:active{
+    transform:rotate(160deg);
+  }
+  .linko:active + #target{
+    width:90%
+  }
+  .padre{
+    margin-top: 4vw;
+    width:100%;
+    display:flex;
+    align-items: center;
+    position: relative;
+  }
 /*MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN*/
 
 
@@ -100,6 +198,8 @@ html {
 }
 .footer_lista:hover{
     margin-left: 20px;
+    text-shadow: 1px 2px 4px rgb(109, 109, 109);
+    color: white;
 }
 .removeTextDec{
     text-decoration: none;
@@ -109,6 +209,14 @@ html {
 
 }
 @media screen and (min-width: 480px) and (max-width: 767px){
+@keyframes moveIn{
+    from {
+            transform: translateX(100vw);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
     /*HEADER HEADER HEADER HEADER HEADER HEADER*/
 .header_nav-lista{
     font-size: 3vw;
@@ -120,9 +228,31 @@ html {
     float: right;
     margin: 3vw 3vw 0 3vw;
     cursor: pointer;
+    transition: all .1s;
 }
 .header_nav-linea:hover{
     margin-top: 3.5vw;
+}
+#main_titulo-1linea{
+    animation-duration: 1s;
+    background-color: #D162AF;
+    animation-name: moveIn;
+}
+#main_titulo-2linea{
+    animation-duration: 3s;
+    background-color: #E27023;
+    width: 100%;
+    animation-name: moveIn;
+}
+#main_titulo-3linea{
+    animation-duration: 2s;
+    background-color: #F8C823;
+    animation-name: moveIn;
+}
+#main_titulo-4linea{
+    animation-duration: 3s;
+    background-color: #7685E6;
+    animation-name: moveIn;
 }
 /*HEADER HEADER HEADER HEADER HEADER HEADER*/
 
@@ -150,10 +280,26 @@ html {
     margin-left: 15.5vw;
 }
 .main_imagen{
+    height: 92.8vw;
     width: 70vw;
     display: block;
     margin: 5vw auto 5vw auto;
     border-radius: 5vw;
+    transition: all 0.1s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://drive.google.com/uc?/export=view&id=1ccwT7PW5BC-x3L8RSlPy2whTkBe6Wew9");
+}
+.main_imagen:hover{
+    box-shadow: 5px 5px 52px 5px rgba(0, 0, 0, 0.3);
+    width: 70vw;
+    height: 92.8vw;
+    border-radius: 5vw;
+    background-image: url("https://drive.google.com/uc?/export=view&id=1q86OsRkDKZLwKUCHoOewIAa3C0ysRS_z");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .main_container-texto{
     margin: 5vw 5vw 5vw 5vw;
@@ -170,6 +316,62 @@ html {
 .marginL5vw{
     margin-left: 5vw;
 }
+#target{
+    width:0px;
+    height:7.9vw;
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    overflow:hidden;
+    top:0px;
+    transition: 0.5s;
+    z-index:1;
+    margin-left: -3vw;
+    margin-right: 3vw;
+    border-radius: 0 50vw 50vw 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    scroll-behavior: unset;
+    cursor: auto;
+    content: 'complete';
+  }
+  .linko{
+    background-color:black;
+    display:flex;
+    width:9vw;
+    height:9vw;
+    border-radius:50%;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    align-items:center;
+    justify-content:center;
+    font-size:5vw;
+    font-weight:700;
+    z-index:2;
+    transition: all 0.75s;
+    overflow: hidden;
+    caret-color: transparent;
+}
+  .linko:hover{
+    background-color: rgb(240, 240, 240);
+    color: black;
+  }
+  .linko:active{
+    transform:rotate(160deg);
+  }
+  .linko:active + #target{
+    width:90%
+  }
+  .padre{
+    margin-top: 4vw;
+    width:100%;
+    display:flex;
+    align-items:center;
+    position: relative;
+    content: 'complete'
+  }
 /*MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN*/
 
 
@@ -198,6 +400,8 @@ html {
 }
 .footer_lista:hover{
     margin-left: 20px;
+    text-shadow: 1px 2px 4px rgb(109, 109, 109);
+    color: white;
 }
 .removeTextDec{
     text-decoration: none;
@@ -214,10 +418,19 @@ html {
     width: 100%;
     transition: all 0.5s ease-in-out;
 }
+@keyframes moveIn{
+    from {
+        transform: translateX(100vw);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 .header_nav-linea{
     float: right;
     margin: 3vw 3vw 0 3vw;
     cursor: pointer;
+    transition: all .1s;
 }
 .header_nav-linea:hover{
     margin-top: 3.5vw;
@@ -230,7 +443,29 @@ html {
     height: 100vh;
     width: 100%;
 }
+#main_titulo-1linea{
+    animation-duration: 1s;
+    background-color: #D162AF;
+    animation-name: moveIn;
+}
+#main_titulo-2linea{
+    animation-duration: 3s;
+    background-color: #E27023;
+    width: 100%;
+    animation-name: moveIn;
+}
+#main_titulo-3linea{
+    animation-duration: 2s;
+    background-color: #F8C823;
+    animation-name: moveIn;
+}
+#main_titulo-4linea{
+    animation-duration: 3s;
+    background-color: #7685E6;
+    animation-name: moveIn;
+}
 .main_titulo{
+    width: 70%;
     display: flex;
     flex-direction: column;
     margin: 0 3vw 0 3vw;
@@ -238,8 +473,11 @@ html {
     font-family: 'Courier New', Courier, monospace;
     font-size: 10vw;
     font-weight: 500;
-    overflow: hidden;
+    overflow: visible;
     bottom: 0px;
+    animation-duration: 3s;
+    animation-name: moveIn;
+    z-index: 1;
 }
 .marginL8vw{
     margin-left: 8vw;
@@ -252,10 +490,27 @@ html {
     grid-template-columns: 50% 50%;
 }
 .main_imagen{
+    height: 39.79vw;
     width: 30vw;
     display: block;
     margin: 5vw auto 5vw auto;
     border-radius: 5vw;
+    transition: all 0.1s;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://drive.google.com/uc?/export=view&id=1ccwT7PW5BC-x3L8RSlPy2whTkBe6Wew9");
+}
+.main_imagen:hover{
+    box-shadow: 5px 5px 52px 5px rgba(0, 0, 0, 0.3);
+    width: 30vw;
+    height: 39.79vw;
+    border-radius: 5vw;
+    background-image: url("https://drive.google.com/uc?/export=view&id=1q86OsRkDKZLwKUCHoOewIAa3C0ysRS_z");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .main_container-texto{
     margin: 2vw 5vw 2vw 5vw;
@@ -273,6 +528,58 @@ html {
 .marginL5vw{
     margin-left: 3vw;
 }
+
+#target{
+    width:0px;
+    height:5vw;
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    overflow:hidden;
+    transition: 0.5s;
+    z-index:1;
+    margin-left: -3vw;
+    border-radius: 0 50vw 50vw 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .linko{
+    background-color:black;
+    display:flex;
+    width:5.3vw;
+    height:5.3vw;
+    border-radius:50%;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    align-items:center;
+    justify-content:center;
+    font-size:5vw;
+    font-weight:700;
+    z-index:2;
+    transition: all 0.75s;
+    overflow: hidden;
+    caret-color: transparent;
+}
+  .linko:hover{
+    background-color: rgb(240, 240, 240);
+    color: black;
+  }
+  .linko:active{
+    transform:rotate(160deg);
+  }
+  .linko:active + #target{
+    width:90%
+  }
+  .padre{
+    margin-top: 2vw;
+    width:100%;
+    display:flex;
+    align-items:center;
+    position: relative;
+  }
+
 /*MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN*/
 
 
@@ -301,6 +608,8 @@ html {
 }
 .footer_lista:hover{
     margin-left: 20px;
+    text-shadow: 1px 2px 4px rgb(109, 109, 109);
+    color: white;
 }
 .removeTextDec{
     text-decoration: none;
