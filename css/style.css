@@ -20,7 +20,7 @@ html {
 }
     /*HEADER HEADER HEADER HEADER HEADER HEADER*/
 .header_nav-lista{
-    font-size: 3vw;
+    font-size: 4.5vw;
     list-style: none;
     width: 100%;
     transition: all 0.5s ease-in-out;
@@ -153,23 +153,21 @@ html {
     overflow: hidden;
     caret-color: transparent;
 }
-  .linko:hover{
+.linko:focus{
     background-color: rgb(240, 240, 240);
     color: black;
-  }
-  .linko:active{
     transform:rotate(160deg);
-  }
-  .linko:active + #target{
+}
+.linko:focus + #target{
     width:90%
-  }
-  .padre{
-    margin-top: 4vw;
+}
+.padre{
+    margin-top: 6vw;
     width:100%;
     display:flex;
     align-items: center;
     position: relative;
-  }
+}
 /*MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN*/
 
 
@@ -354,18 +352,16 @@ html {
     overflow: hidden;
     caret-color: transparent;
 }
-  .linko:hover{
+.linko:focus{
     background-color: rgb(240, 240, 240);
     color: black;
-  }
-  .linko:active{
     transform:rotate(160deg);
-  }
-  .linko:active + #target{
+}
+.linko:focus + #target{
     width:90%
-  }
+}
   .padre{
-    margin-top: 4vw;
+    margin-top: 6vw;
     width:100%;
     display:flex;
     align-items:center;
